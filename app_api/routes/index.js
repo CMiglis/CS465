@@ -9,4 +9,9 @@ router
     .route('/trips')
     .get(tripsController.tripsList); // GET Method routes tripList
 
+// GET Method routes tripsFindByCode - requires parameter
+router
+    .route('/trips/:tripCode')
+    .get(tripsController.tripsFindByCode);
+
 module.exports = router;
